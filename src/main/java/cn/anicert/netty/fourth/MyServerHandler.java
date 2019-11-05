@@ -1,4 +1,4 @@
-package cn.anicert.netty.four;
+package cn.anicert.netty.fourth;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

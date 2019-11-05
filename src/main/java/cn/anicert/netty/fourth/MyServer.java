@@ -1,4 +1,4 @@
-package cn.anicert.netty.four;
+package cn.anicert.netty.fourth;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
