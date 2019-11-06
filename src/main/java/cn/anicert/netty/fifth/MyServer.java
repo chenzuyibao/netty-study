@@ -7,6 +7,12 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
+/**
+ * websocket的server
+ * 
+ * @author chenzuyi
+ * @date 2019/11/06
+ */
 public class MyServer {
 
     public static void main(String[] args) throws Exception {
