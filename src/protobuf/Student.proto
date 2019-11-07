@@ -1,0 +1,12 @@
+syntax = "proto2";
+package cn.anicert.netty.protobufTest;
+
+option optimize_for = SPEED;
+option java_package = "cn.anicert.netty.protobufTest";
+option java_outer_classname = "DataInfo";
+
+message Student{
+    required string name=1;
+    optional int32 id=2;
+    optional string address=3;
+}
