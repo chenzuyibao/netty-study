@@ -21,7 +21,7 @@ public class TestServerInitializer extends ChannelInitializer<SocketChannel> {
          * 这个handler，需要传入一个参数MessageLite，即我们需要传输数据的那个实例（这里是MyDataInfo.Student）
          * 这个代码耦合强了，还必须指定类，加入要传连个类，或者每次不同的类呢？这样写肯定是不行的.
          */
-        pipeline.addLast(new ProtobufDecoder(MyDataInfo.Person.getDefaultInstance()));
+        pipeline.addLast(new ProtobufDecoder(MyMessageData.MyMessage.getDefaultInstance()));
         pipeline.addLast(new ProtobufVarint32LengthFieldPrepender());
         pipeline.addLast(new ProtobufEncoder());
 

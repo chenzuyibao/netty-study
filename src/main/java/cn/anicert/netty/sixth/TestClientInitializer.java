@@ -21,7 +21,7 @@ public class TestClientInitializer extends ChannelInitializer<SocketChannel> {
          * 这个handler，需要传入一个参数MessageLite，即我们需要传输数据的那个实例,耦合太强了 且不能使用多种数据，可以使用下面的枚举类型,解决这个问题. pipeline.addLast(new
          * ProtobufDecoder(MyDataInfo.Student.getDefaultInstance()));
          */
-        pipeline.addLast(new ProtobufDecoder(MyDataInfo.Person.getDefaultInstance()));
+        pipeline.addLast(new ProtobufDecoder(MyMessageData.MyMessage.getDefaultInstance()));
         pipeline.addLast(new ProtobufVarint32LengthFieldPrepender());
         pipeline.addLast(new ProtobufEncoder());
 
