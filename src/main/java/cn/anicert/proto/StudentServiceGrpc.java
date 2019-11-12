@@ -1,18 +1,11 @@
-package cn.anicert.netty.proto;
+package cn.anicert.proto;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
@@ -27,29 +20,29 @@ public final class StudentServiceGrpc {
   public static final String SERVICE_NAME = "cn.anicert.netty.proto.StudentService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<cn.anicert.netty.proto.MyRequest,
-      cn.anicert.netty.proto.MyResponse> getGetRealNameByUserNameMethod;
+  private static volatile io.grpc.MethodDescriptor<MyRequest,
+          MyResponse> getGetRealNameByUserNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetRealNameByUserName",
-      requestType = cn.anicert.netty.proto.MyRequest.class,
-      responseType = cn.anicert.netty.proto.MyResponse.class,
+      requestType = MyRequest.class,
+      responseType = MyResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cn.anicert.netty.proto.MyRequest,
-      cn.anicert.netty.proto.MyResponse> getGetRealNameByUserNameMethod() {
-    io.grpc.MethodDescriptor<cn.anicert.netty.proto.MyRequest, cn.anicert.netty.proto.MyResponse> getGetRealNameByUserNameMethod;
+  public static io.grpc.MethodDescriptor<MyRequest,
+          MyResponse> getGetRealNameByUserNameMethod() {
+    io.grpc.MethodDescriptor<MyRequest, MyResponse> getGetRealNameByUserNameMethod;
     if ((getGetRealNameByUserNameMethod = StudentServiceGrpc.getGetRealNameByUserNameMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getGetRealNameByUserNameMethod = StudentServiceGrpc.getGetRealNameByUserNameMethod) == null) {
           StudentServiceGrpc.getGetRealNameByUserNameMethod = getGetRealNameByUserNameMethod =
-              io.grpc.MethodDescriptor.<cn.anicert.netty.proto.MyRequest, cn.anicert.netty.proto.MyResponse>newBuilder()
+              io.grpc.MethodDescriptor.<MyRequest, MyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRealNameByUserName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cn.anicert.netty.proto.MyRequest.getDefaultInstance()))
+                  MyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cn.anicert.netty.proto.MyResponse.getDefaultInstance()))
+                  MyResponse.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetRealNameByUserName"))
               .build();
         }
@@ -87,8 +80,8 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUserName(cn.anicert.netty.proto.MyRequest request,
-        io.grpc.stub.StreamObserver<cn.anicert.netty.proto.MyResponse> responseObserver) {
+    public void getRealNameByUserName(MyRequest request,
+                                      io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetRealNameByUserNameMethod(), responseObserver);
     }
 
@@ -98,8 +91,8 @@ public final class StudentServiceGrpc {
             getGetRealNameByUserNameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                cn.anicert.netty.proto.MyRequest,
-                cn.anicert.netty.proto.MyResponse>(
+                      MyRequest,
+                      MyResponse>(
                   this, METHODID_GET_REAL_NAME_BY_USER_NAME)))
           .build();
     }
@@ -125,8 +118,8 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUserName(cn.anicert.netty.proto.MyRequest request,
-        io.grpc.stub.StreamObserver<cn.anicert.netty.proto.MyResponse> responseObserver) {
+    public void getRealNameByUserName(MyRequest request,
+                                      io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetRealNameByUserNameMethod(), getCallOptions()), request, responseObserver);
     }
@@ -152,7 +145,7 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public cn.anicert.netty.proto.MyResponse getRealNameByUserName(cn.anicert.netty.proto.MyRequest request) {
+    public MyResponse getRealNameByUserName(MyRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetRealNameByUserNameMethod(), getCallOptions(), request);
     }
@@ -178,8 +171,8 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<cn.anicert.netty.proto.MyResponse> getRealNameByUserName(
-        cn.anicert.netty.proto.MyRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<MyResponse> getRealNameByUserName(
+        MyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetRealNameByUserNameMethod(), getCallOptions()), request);
     }
@@ -205,8 +198,8 @@ public final class StudentServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_REAL_NAME_BY_USER_NAME:
-          serviceImpl.getRealNameByUserName((cn.anicert.netty.proto.MyRequest) request,
-              (io.grpc.stub.StreamObserver<cn.anicert.netty.proto.MyResponse>) responseObserver);
+          serviceImpl.getRealNameByUserName((MyRequest) request,
+              (io.grpc.stub.StreamObserver<MyResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -230,7 +223,7 @@ public final class StudentServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return cn.anicert.netty.proto.StudentProto.getDescriptor();
+      return StudentProto.getDescriptor();
     }
 
     @java.lang.Override
