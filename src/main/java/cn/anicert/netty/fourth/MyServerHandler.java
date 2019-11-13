@@ -30,6 +30,8 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
                 case ALL_IDLE:
                     eventType = "读写空闲";
                     break;
+                default:
+                    break;
             }
             /**
              * 注意了，这个读空闲和写空闲，指的是当前实现这个Handler的类，即Server 如果Server没有接受到客户端的数据，即为读空闲（因为没有读取数据） 如果Server没有发送消息，即为写空闲

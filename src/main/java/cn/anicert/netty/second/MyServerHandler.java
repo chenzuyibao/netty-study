@@ -22,7 +22,6 @@ public class MyServerHandler extends SimpleChannelInboundHandler<String> {
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
-        //super.exceptionCaught(ctx, cause);
         ctx.close();
     }
     
