@@ -34,6 +34,11 @@ public final class StudentProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cn_anicert_netty_proto_StudentResponse_fieldAccessorTable;
+    static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_cn_anicert_netty_proto_StudentResponseList_descriptor;
+    static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_cn_anicert_netty_proto_StudentResponseList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -47,13 +52,18 @@ public final class StudentProto {
       "\035\n\tMyRequest\022\020\n\010username\030\001 \001(\t\"\036\n\nMyResp" +
       "onse\022\020\n\010realname\030\002 \001(\t\"\035\n\016StudentRequest" +
       "\022\013\n\003age\030\001 \001(\005\":\n\017StudentResponse\022\014\n\004name" +
-      "\030\001 \001(\t\022\013\n\003age\030\002 \001(\005\022\014\n\004addr\030\003 \001(\t2\333\001\n\016St" +
-      "udentService\022`\n\025GetRealNameByUserName\022!." +
-      "cn.anicert.netty.proto.MyRequest\032\".cn.an" +
-      "icert.netty.proto.MyResponse\"\000\022g\n\020GetStu" +
-      "dentsByAge\022&.cn.anicert.netty.proto.Stud" +
-      "entRequest\032\'.cn.anicert.netty.proto.Stud" +
-      "entResponse\"\0000\001B\"\n\020cn.anicert.protoB\014Stu" +
+              "\030\001 \001(\t\022\013\n\003age\030\002 \001(\005\022\014\n\004addr\030\003 \001(\t\"W\n\023Stu" +
+              "dentResponseList\022@\n\017studentResponse\030\001 \003(" +
+              "\0132\'.cn.anicert.netty.proto.StudentRespon" +
+              "se2\312\002\n\016StudentService\022`\n\025GetRealNameByUs" +
+              "erName\022!.cn.anicert.netty.proto.MyReques" +
+              "t\032\".cn.anicert.netty.proto.MyResponse\"\000\022" +
+              "g\n\020GetStudentsByAge\022&.cn.anicert.netty.p" +
+              "roto.StudentRequest\032\'.cn.anicert.netty.p" +
+              "roto.StudentResponse\"\0000\001\022m\n\022GetStudentsB" +
+              "ysAges\022&.cn.anicert.netty.proto.StudentR" +
+              "equest\032+.cn.anicert.netty.proto.StudentR" +
+              "esponseList\"\000(\001B\"\n\020cn.anicert.protoB\014Stu" +
       "dentProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -84,6 +94,12 @@ public final class StudentProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cn_anicert_netty_proto_StudentResponse_descriptor,
         new String[] { "Name", "Age", "Addr", });
+      internal_static_cn_anicert_netty_proto_StudentResponseList_descriptor =
+              getDescriptor().getMessageTypes().get(4);
+      internal_static_cn_anicert_netty_proto_StudentResponseList_fieldAccessorTable = new
+              com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+              internal_static_cn_anicert_netty_proto_StudentResponseList_descriptor,
+              new String[]{"StudentResponse",});
   }
 
   // @@protoc_insertion_point(outer_class_scope)

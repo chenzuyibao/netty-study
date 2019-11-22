@@ -105,13 +105,14 @@ private static final long serialVersionUID = 0L;
    * <code>string name = 1;</code>
    * @return The name.
    */
+  @Override
   public String getName() {
     Object ref = name_;
     if (ref instanceof String) {
       return (String) ref;
     } else {
-      com.google.protobuf.ByteString bs =
-          (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
       String s = bs.toStringUtf8();
       name_ = s;
       return s;
@@ -121,12 +122,13 @@ private static final long serialVersionUID = 0L;
    * <code>string name = 1;</code>
    * @return The bytes for name.
    */
+  @Override
   public com.google.protobuf.ByteString
       getNameBytes() {
     Object ref = name_;
     if (ref instanceof String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8(
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
               (String) ref);
       name_ = b;
       return b;
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * <code>int32 age = 2;</code>
    * @return The age.
    */
+  @Override
   public int getAge() {
     return age_;
   }
@@ -151,13 +154,14 @@ private static final long serialVersionUID = 0L;
    * <code>string addr = 3;</code>
    * @return The addr.
    */
+  @Override
   public String getAddr() {
     Object ref = addr_;
     if (ref instanceof String) {
       return (String) ref;
     } else {
-      com.google.protobuf.ByteString bs =
-          (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
       String s = bs.toStringUtf8();
       addr_ = s;
       return s;
@@ -167,12 +171,13 @@ private static final long serialVersionUID = 0L;
    * <code>string addr = 3;</code>
    * @return The bytes for addr.
    */
+  @Override
   public com.google.protobuf.ByteString
       getAddrBytes() {
     Object ref = addr_;
     if (ref instanceof String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8(
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
               (String) ref);
       addr_ = b;
       return b;
@@ -522,6 +527,7 @@ private static final long serialVersionUID = 0L;
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @Override
     public String getName() {
       Object ref = name_;
       if (!(ref instanceof String)) {
@@ -538,12 +544,13 @@ private static final long serialVersionUID = 0L;
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8(
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
                 (String) ref);
         name_ = b;
         return b;
@@ -562,7 +569,7 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
 
-      name_ = value;
+        name_ = value;
       onChanged();
       return this;
     }
@@ -572,7 +579,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearName() {
 
-      name_ = getDefaultInstance().getName();
+        name_ = getDefaultInstance().getName();
       onChanged();
       return this;
     }
@@ -588,7 +595,7 @@ private static final long serialVersionUID = 0L;
   }
   checkByteStringIsUtf8(value);
 
-      name_ = value;
+        name_ = value;
       onChanged();
       return this;
     }
@@ -598,6 +605,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 age = 2;</code>
      * @return The age.
      */
+    @Override
     public int getAge() {
       return age_;
     }
@@ -608,7 +616,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAge(int value) {
 
-      age_ = value;
+        age_ = value;
       onChanged();
       return this;
     }
@@ -618,7 +626,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAge() {
 
-      age_ = 0;
+        age_ = 0;
       onChanged();
       return this;
     }
@@ -628,6 +636,7 @@ private static final long serialVersionUID = 0L;
      * <code>string addr = 3;</code>
      * @return The addr.
      */
+    @Override
     public String getAddr() {
       Object ref = addr_;
       if (!(ref instanceof String)) {
@@ -644,12 +653,13 @@ private static final long serialVersionUID = 0L;
      * <code>string addr = 3;</code>
      * @return The bytes for addr.
      */
+    @Override
     public com.google.protobuf.ByteString
         getAddrBytes() {
       Object ref = addr_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8(
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
                 (String) ref);
         addr_ = b;
         return b;
@@ -668,7 +678,7 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
 
-      addr_ = value;
+        addr_ = value;
       onChanged();
       return this;
     }
@@ -678,7 +688,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAddr() {
 
-      addr_ = getDefaultInstance().getAddr();
+        addr_ = getDefaultInstance().getAddr();
       onChanged();
       return this;
     }
@@ -694,7 +704,7 @@ private static final long serialVersionUID = 0L;
   }
   checkByteStringIsUtf8(value);
 
-      addr_ = value;
+        addr_ = value;
       onChanged();
       return this;
     }

@@ -91,6 +91,7 @@ private static final long serialVersionUID = 0L;
    * <code>int32 age = 1;</code>
    * @return The age.
    */
+  @Override
   public int getAge() {
     return age_;
   }
@@ -402,6 +403,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 age = 1;</code>
      * @return The age.
      */
+    @Override
     public int getAge() {
       return age_;
     }

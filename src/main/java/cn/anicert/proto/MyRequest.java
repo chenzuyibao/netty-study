@@ -93,13 +93,14 @@ private static final long serialVersionUID = 0L;
    * <code>string username = 1;</code>
    * @return The username.
    */
+  @Override
   public String getUsername() {
     Object ref = username_;
     if (ref instanceof String) {
       return (String) ref;
     } else {
       com.google.protobuf.ByteString bs =
-          (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
       String s = bs.toStringUtf8();
       username_ = s;
       return s;
@@ -109,12 +110,13 @@ private static final long serialVersionUID = 0L;
    * <code>string username = 1;</code>
    * @return The bytes for username.
    */
+  @Override
   public com.google.protobuf.ByteString
       getUsernameBytes() {
     Object ref = username_;
     if (ref instanceof String) {
       com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8(
+              com.google.protobuf.ByteString.copyFromUtf8(
               (String) ref);
       username_ = b;
       return b;
@@ -430,6 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>string username = 1;</code>
      * @return The username.
      */
+    @Override
     public String getUsername() {
       Object ref = username_;
       if (!(ref instanceof String)) {
@@ -446,12 +449,13 @@ private static final long serialVersionUID = 0L;
      * <code>string username = 1;</code>
      * @return The bytes for username.
      */
+    @Override
     public com.google.protobuf.ByteString
         getUsernameBytes() {
       Object ref = username_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8(
+                com.google.protobuf.ByteString.copyFromUtf8(
                 (String) ref);
         username_ = b;
         return b;

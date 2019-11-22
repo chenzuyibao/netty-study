@@ -93,13 +93,14 @@ private static final long serialVersionUID = 0L;
    * <code>string realname = 2;</code>
    * @return The realname.
    */
+  @Override
   public String getRealname() {
     Object ref = realname_;
     if (ref instanceof String) {
       return (String) ref;
     } else {
       com.google.protobuf.ByteString bs =
-          (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
       String s = bs.toStringUtf8();
       realname_ = s;
       return s;
@@ -109,12 +110,13 @@ private static final long serialVersionUID = 0L;
    * <code>string realname = 2;</code>
    * @return The bytes for realname.
    */
+  @Override
   public com.google.protobuf.ByteString
       getRealnameBytes() {
     Object ref = realname_;
     if (ref instanceof String) {
       com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8(
+              com.google.protobuf.ByteString.copyFromUtf8(
               (String) ref);
       realname_ = b;
       return b;
@@ -430,6 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>string realname = 2;</code>
      * @return The realname.
      */
+    @Override
     public String getRealname() {
       Object ref = realname_;
       if (!(ref instanceof String)) {
@@ -446,12 +449,13 @@ private static final long serialVersionUID = 0L;
      * <code>string realname = 2;</code>
      * @return The bytes for realname.
      */
+    @Override
     public com.google.protobuf.ByteString
         getRealnameBytes() {
       Object ref = realname_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8(
+                com.google.protobuf.ByteString.copyFromUtf8(
                 (String) ref);
         realname_ = b;
         return b;
