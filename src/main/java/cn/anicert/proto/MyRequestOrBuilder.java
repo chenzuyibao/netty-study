@@ -4,14 +4,14 @@
 package cn.anicert.proto;
 
 public interface MyRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:MyRequest)
+    // @@protoc_insertion_point(interface_extends:cn.anicert.netty.proto.MyRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>string username = 1;</code>
    * @return The username.
    */
-  java.lang.String getUsername();
+  String getUsername();
   /**
    * <code>string username = 1;</code>
    * @return The bytes for username.

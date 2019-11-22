@@ -4,11 +4,11 @@
 package cn.anicert.proto;
 
 /**
- * Protobuf type {@code MyResponse}
+ * Protobuf type {@code cn.anicert.netty.proto.MyResponse}
  */
 public  final class MyResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:MyResponse)
+    // @@protoc_insertion_point(message_implements:cn.anicert.netty.proto.MyResponse)
     MyResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use MyResponse.newBuilder() to construct.
@@ -19,14 +19,14 @@ private static final long serialVersionUID = 0L;
     realname_ = "";
   }
 
-  @java.lang.Override
+  @Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
+  protected Object newInstance(
       UnusedPrivateParameter unused) {
     return new MyResponse();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -37,7 +37,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException();
     }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             realname_ = s;
             break;
@@ -79,8 +79,8 @@ private static final long serialVersionUID = 0L;
     return StudentProto.internal_static_cn_anicert_netty_proto_MyResponse_descriptor;
   }
 
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  @Override
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return StudentProto.internal_static_cn_anicert_netty_proto_MyResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
@@ -88,19 +88,19 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REALNAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object realname_;
+  private volatile Object realname_;
   /**
    * <code>string realname = 2;</code>
    * @return The realname.
    */
-  public java.lang.String getRealname() {
-    java.lang.Object ref = realname_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getRealname() {
+    Object ref = realname_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
+      com.google.protobuf.ByteString bs =
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       realname_ = s;
       return s;
     }
@@ -111,11 +111,11 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.ByteString
       getRealnameBytes() {
-    java.lang.Object ref = realname_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
+    Object ref = realname_;
+    if (ref instanceof String) {
+      com.google.protobuf.ByteString b =
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       realname_ = b;
       return b;
     } else {
@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
-  @java.lang.Override
+  @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getRealnameBytes().isEmpty()) {
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
-  @java.lang.Override
+  @Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -157,8 +157,8 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -257,7 +257,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @java.lang.Override
+  @Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -265,45 +265,45 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(MyResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @java.lang.Override
+  @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   * Protobuf type {@code MyResponse}
+   * Protobuf type {@code cn.anicert.netty.proto.MyResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:MyResponse)
-          MyResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:cn.anicert.netty.proto.MyResponse)
+      MyResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return StudentProto.internal_static_cn_anicert_netty_proto_MyResponse_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return StudentProto.internal_static_cn_anicert_netty_proto_MyResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               MyResponse.class, MyResponse.Builder.class);
     }
 
-    // Construct using MyResponse.newBuilder()
+    // Construct using cn.anicert.proto.MyResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
-    @java.lang.Override
+    @Override
     public Builder clear() {
       super.clear();
       realname_ = "";
@@ -320,18 +320,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return StudentProto.internal_static_cn_anicert_netty_proto_MyResponse_descriptor;
     }
 
-    @java.lang.Override
+    @Override
     public MyResponse getDefaultInstanceForType() {
       return MyResponse.getDefaultInstance();
     }
 
-    @java.lang.Override
+    @Override
     public MyResponse build() {
       MyResponse result = buildPartial();
       if (!result.isInitialized()) {
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public MyResponse buildPartial() {
       MyResponse result = new MyResponse(this);
       result.realname_ = realname_;
@@ -348,39 +348,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public Builder clone() {
       return super.clone();
     }
-    @java.lang.Override
+    @Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.setField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @java.lang.Override
+    @Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @java.lang.Override
+    @Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @java.lang.Override
+    @Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.addRepeatedField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof MyResponse) {
         return mergeFrom((MyResponse)other);
@@ -401,12 +401,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -425,21 +425,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object realname_ = "";
+    private Object realname_ = "";
     /**
      * <code>string realname = 2;</code>
      * @return The realname.
      */
-    public java.lang.String getRealname() {
-      java.lang.Object ref = realname_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getRealname() {
+      Object ref = realname_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         realname_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -448,11 +448,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getRealnameBytes() {
-      java.lang.Object ref = realname_;
+      Object ref = realname_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         realname_ = b;
         return b;
       } else {
@@ -465,11 +465,11 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRealname(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
-  
+
       realname_ = value;
       onChanged();
       return this;
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRealname() {
-      
+
       realname_ = getDefaultInstance().getRealname();
       onChanged();
       return this;
@@ -495,28 +495,28 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-      
+
       realname_ = value;
       onChanged();
       return this;
     }
-    @java.lang.Override
+    @Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:MyResponse)
+    // @@protoc_insertion_point(builder_scope:cn.anicert.netty.proto.MyResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:MyResponse)
+  // @@protoc_insertion_point(class_scope:cn.anicert.netty.proto.MyResponse)
   private static final MyResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new MyResponse();
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<MyResponse>
       PARSER = new com.google.protobuf.AbstractParser<MyResponse>() {
-    @java.lang.Override
+    @Override
     public MyResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -541,12 +541,12 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<MyResponse> getParserForType() {
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public MyResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

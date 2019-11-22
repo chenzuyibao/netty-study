@@ -18,4 +18,5 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
         responseObserver.onNext(MyResponse.newBuilder().setRealname("张三").build());
         responseObserver.onCompleted();
     }
+
 }
