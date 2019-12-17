@@ -22,7 +22,7 @@ public class NioTest3 {
         ByteBuffer buffer = ByteBuffer.allocate(1024);
 
         while (true) {
-
+            //每次需要重新清除buffer，其实就是定义position和limit位置
             buffer.clear();
 
             int read = inputChannel.read(buffer);
