@@ -1,19 +1,13 @@
 package cn.anicert.netty.first;
 
-import java.net.URI;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.handler.codec.http.DefaultFullHttpResponse;
-import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.handler.codec.http.HttpHeaderNames;
-import io.netty.handler.codec.http.HttpObject;
-import io.netty.handler.codec.http.HttpRequest;
-import io.netty.handler.codec.http.HttpResponseStatus;
-import io.netty.handler.codec.http.HttpVersion;
+import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
+
+import java.net.URI;
 
 /**
  * 继承InboundHandler类，代表处理进入的请求，还有OutboundHandler,处理出去请求
@@ -30,6 +24,7 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
             System.out.println(msg.getClass());
             System.out.println(ctx.channel().remoteAddress());
             HttpRequest httpRequest = (HttpRequest) msg;
+            System.out.println("请求方法名:" + httpRequest.method().name());
             URI uri = new URI(httpRequest.uri());
             // 判断url是否请求了favicon.ico
             if ("/favicon.ico".equals(uri.getPath())) {
@@ -39,7 +34,6 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
             /**
              * 上面这段代码是验证如果用浏览器访问 chrome浏览器发起了两次请求，一次是发起的端口，第二次是请求/favicon.ico图标 具体可以查看chrome的请求
              */
-            System.out.println("请求方法名:" + httpRequest.method().name());
             // ByteBuf,neety中极为重要的概念，代表响应返回的数据
             ByteBuf content = Unpooled.copiedBuffer("HelloWorld!", CharsetUtil.UTF_8);
             // 构造一个http响应,HttpVersion.HTTP_1_1:采用http1.1协议，HttpResponseStatus.OK：状态码200
