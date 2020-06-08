@@ -29,9 +29,7 @@ public class NioTest2 {
             System.out.println("position:" + buffer.position());
             System.out.println("limit:" + buffer.limit());
             System.out.println("capacity:" + buffer.capacity());
-
             System.out.println(buffer.get());
-
         }
 
     }
