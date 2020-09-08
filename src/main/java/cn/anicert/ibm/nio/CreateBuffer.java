@@ -1,4 +1,4 @@
-package cn.anicert.ibm.nio;// $Id$
+package cn.anicert.ibm.nio;
 
 import java.nio.ByteBuffer;
 

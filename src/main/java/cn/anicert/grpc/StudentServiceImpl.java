@@ -1,15 +1,14 @@
 package cn.anicert.grpc;
 
-import cn.anicert.proto.*;
 import io.grpc.stub.StreamObserver;
 
 /**
  * @author chenzuyi
  * @create 2019-11-12 10:55
  */
-public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBase {
+public class StudentServiceImpl /*extends StudentServiceGrpc.StudentServiceImplBase*/ {
 
-    @Override
+    /*@Override
     public void getRealNameByUserName(MyRequest request, StreamObserver<MyResponse> responseObserver) {
         System.out.println("接收客户端的请求：" + request.getUsername());
 
@@ -54,5 +53,5 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
             }
         };
 
-    }
+    }*/
 }

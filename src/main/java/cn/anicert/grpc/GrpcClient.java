@@ -1,6 +1,5 @@
 package cn.anicert.grpc;
 
-import cn.anicert.proto.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
@@ -14,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class GrpcClient {
 
-    private final ManagedChannel channel;
+    /*private final ManagedChannel channel;
 
     public GrpcClient(String host, int port) {
         this(ManagedChannelBuilder.forAddress(host, port)
@@ -81,6 +80,6 @@ public class GrpcClient {
         studentRequestStreamObserver.onCompleted();
 
         Thread.sleep(50000);
-    }
+    }*/
 
 }

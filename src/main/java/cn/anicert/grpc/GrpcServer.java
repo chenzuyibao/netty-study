@@ -1,10 +1,5 @@
 package cn.anicert.grpc;
 
-import io.grpc.Server;
-import io.grpc.ServerBuilder;
-
-import java.io.IOException;
-
 /**
  * rpcserver端
  *
@@ -13,7 +8,7 @@ import java.io.IOException;
  */
 public class GrpcServer {
 
-    private Server server;
+    /*private Server server;
 
     private void start() throws IOException {
         int port = 50051;
@@ -47,6 +42,6 @@ public class GrpcServer {
         GrpcServer grpcServer = new GrpcServer();
         grpcServer.start();
         grpcServer.blockUntilShutdown();
-    }
+    }*/
 
 }
